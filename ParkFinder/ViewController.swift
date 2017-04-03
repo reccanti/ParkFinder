@@ -35,7 +35,11 @@ class ViewController: UIViewController {
         do {
             let data = try Data(contentsOf:path, options:[])
             let json = JSON(data:data)
-            print("json=\(json)")
+            if json != JSON.null {
+                parse(json: json)
+            } else {
+                print("json is null!")
+            }
         } catch {
             print("Error: could not initialize the Data() object!")
         }
@@ -44,6 +48,40 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: - Helper Methods
+    
+    /**
+     * Parses a JSON object and prints the results
+     */
+    func parse(json:JSON) {
+        // PARSE the JSON
+        // pull the array of dictionaries out of the JSON
+        let array = json["parks"].arrayValue
+        
+        // create and initialize an array to hold our StatePark instances
+        var parks = [StatePark]()
+        
+        // loop through the array
+        for d in array {
+            var name = d["name"].stringValue
+            if name.isEmpty {
+                name = "No title found"
+            }
+            
+            // no optional binding necessary!
+            let latitude = d["latitude"].floatValue
+            let longitude = d["longitude"].floatValue
+            
+            let park = StatePark(name: name, latitude: latitude, longitude: longitude)
+            parks.append(park)
+            
+            // SwiftyJSON returns "" or 0 if the property doesn't exist
+//            let fakeProperty:Int = d["xyzpdq"].intValue as Int
+//            print("fakeProperty=\(fakeProperty)") // 0
+        }
+        print(parks)
     }
 
 
