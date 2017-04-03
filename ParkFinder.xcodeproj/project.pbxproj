@@ -14,6 +14,7 @@
 		B75742E11E91F2B700D9F2AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B75742E01E91F2B700D9F2AF /* Assets.xcassets */; };
 		B75742E41E91F2B700D9F2AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B75742E21E91F2B700D9F2AF /* LaunchScreen.storyboard */; };
 		B75742ED1E91F2C300D9F2AF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75742EC1E91F2C300D9F2AF /* MapKit.framework */; };
+		B75742F01E9201CF00D9F2AF /* parks.js in Resources */ = {isa = PBXBuildFile; fileRef = B75742EF1E9201CF00D9F2AF /* parks.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		B75742E31E91F2B700D9F2AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B75742E51E91F2B700D9F2AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B75742EC1E91F2C300D9F2AF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B75742EF1E9201CF00D9F2AF /* parks.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = parks.js; path = ../../../../Downloads/parks.js; sourceTree = "<group>"; };
 		E468969EB0D63E20F556E0B7 /* Pods_ParkFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				B75742D91E91F2B700D9F2AF /* AppDelegate.swift */,
+				B75742EE1E9201AA00D9F2AF /* Data */,
 				B75742DB1E91F2B700D9F2AF /* ViewController.swift */,
 				B75742DD1E91F2B700D9F2AF /* Main.storyboard */,
 				B75742E01E91F2B700D9F2AF /* Assets.xcassets */,
@@ -81,6 +84,14 @@
 				E468969EB0D63E20F556E0B7 /* Pods_ParkFinder.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B75742EE1E9201AA00D9F2AF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B75742EF1E9201CF00D9F2AF /* parks.js */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 		DB437B24723685BCB4F27C68 /* Pods */ = {
@@ -160,6 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B75742F01E9201CF00D9F2AF /* parks.js in Resources */,
 				B75742E41E91F2B700D9F2AF /* LaunchScreen.storyboard in Resources */,
 				B75742E11E91F2B700D9F2AF /* Assets.xcassets in Resources */,
 				B75742DF1E91F2B700D9F2AF /* Main.storyboard in Resources */,
@@ -388,6 +400,7 @@
 				B75742EA1E91F2B700D9F2AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
