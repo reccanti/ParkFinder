@@ -1,0 +1,25 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ViewController"
+provides-nominal:
+- "C10ParkFinder14ViewController"
+provides-member:
+- ["C10ParkFinder14ViewController", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "ViewController"
+- "UIViewController"
+depends-member:
+- ["Ps9AnyObject", ""]
+- ["C10ParkFinder14ViewController", "deinit"]
+- ["C10ParkFinder14ViewController", "didReceiveMemoryWarning"]
+- ["C10ParkFinder14ViewController", "init"]
+- ["C10ParkFinder14ViewController", "viewDidLoad"]
+depends-nominal:
+- "Ps9AnyObject"
+- "C10ParkFinder14ViewController"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+interface-hash: "2273e0b6560749631899e82af2412a52"

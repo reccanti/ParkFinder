@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EC289D4C52B431EB0922724 /* Pods_ParkFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E468969EB0D63E20F556E0B7 /* Pods_ParkFinder.framework */; };
 		B75742DA1E91F2B700D9F2AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75742D91E91F2B700D9F2AF /* AppDelegate.swift */; };
 		B75742DC1E91F2B700D9F2AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75742DB1E91F2B700D9F2AF /* ViewController.swift */; };
 		B75742DF1E91F2B700D9F2AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B75742DD1E91F2B700D9F2AF /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26393E5C7BF26F179969AD90 /* Pods-ParkFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParkFinder/Pods-ParkFinder.release.xcconfig"; sourceTree = "<group>"; };
+		79675689E7CBB49A09D06516 /* Pods-ParkFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParkFinder/Pods-ParkFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		B75742D61E91F2B700D9F2AF /* ParkFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B75742D91E91F2B700D9F2AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B75742DB1E91F2B700D9F2AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		B75742E31E91F2B700D9F2AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B75742E51E91F2B700D9F2AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B75742EC1E91F2C300D9F2AF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E468969EB0D63E20F556E0B7 /* Pods_ParkFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B75742ED1E91F2C300D9F2AF /* MapKit.framework in Frameworks */,
+				4EC289D4C52B431EB0922724 /* Pods_ParkFinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,7 @@
 				B75742D81E91F2B700D9F2AF /* ParkFinder */,
 				B75742D71E91F2B700D9F2AF /* Products */,
 				B75742EB1E91F2C300D9F2AF /* Frameworks */,
+				DB437B24723685BCB4F27C68 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,8 +78,18 @@
 			isa = PBXGroup;
 			children = (
 				B75742EC1E91F2C300D9F2AF /* MapKit.framework */,
+				E468969EB0D63E20F556E0B7 /* Pods_ParkFinder.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB437B24723685BCB4F27C68 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				79675689E7CBB49A09D06516 /* Pods-ParkFinder.debug.xcconfig */,
+				26393E5C7BF26F179969AD90 /* Pods-ParkFinder.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +99,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B75742E81E91F2B700D9F2AF /* Build configuration list for PBXNativeTarget "ParkFinder" */;
 			buildPhases = (
+				6118D287B386BA3ECA34BF58 /* [CP] Check Pods Manifest.lock */,
 				B75742D21E91F2B600D9F2AF /* Sources */,
 				B75742D31E91F2B600D9F2AF /* Frameworks */,
 				B75742D41E91F2B600D9F2AF /* Resources */,
+				AA5C00548FCFFA973267F8D5 /* [CP] Embed Pods Frameworks */,
+				4EAD0939588940F82DEE82C9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,6 +167,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4EAD0939588940F82DEE82C9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParkFinder/Pods-ParkFinder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6118D287B386BA3ECA34BF58 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AA5C00548FCFFA973267F8D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParkFinder/Pods-ParkFinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B75742D21E91F2B600D9F2AF /* Sources */ = {
@@ -276,6 +343,7 @@
 		};
 		B75742E91E91F2B700D9F2AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79675689E7CBB49A09D06516 /* Pods-ParkFinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MCPPMCE5C6;
@@ -289,6 +357,7 @@
 		};
 		B75742EA1E91F2B700D9F2AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26393E5C7BF26F179969AD90 /* Pods-ParkFinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MCPPMCE5C6;

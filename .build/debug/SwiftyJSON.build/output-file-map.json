@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/benjaminwilcox/Projects/active/ParkFinder/.build/debug/SwiftyJSON.build/master.swiftdeps"
+  },
+  "/Users/benjaminwilcox/Projects/active/ParkFinder/Packages/SwiftyJSON-3.1.4/Source/SwiftyJSON.swift": {
+    "dependencies": "/Users/benjaminwilcox/Projects/active/ParkFinder/.build/debug/SwiftyJSON.build/SwiftyJSON.d",
+    "object": "/Users/benjaminwilcox/Projects/active/ParkFinder/.build/debug/SwiftyJSON.build/SwiftyJSON.swift.o",
+    "swiftmodule": "/Users/benjaminwilcox/Projects/active/ParkFinder/.build/debug/SwiftyJSON.build/SwiftyJSON~partial.swiftmodule",
+    "swift-dependencies": "/Users/benjaminwilcox/Projects/active/ParkFinder/.build/debug/SwiftyJSON.build/SwiftyJSON.swiftdeps"
+  }
+}

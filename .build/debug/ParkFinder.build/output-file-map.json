@@ -1,0 +1,17 @@
+{
+  "": {
+    "swift-dependencies": "/Users/benjaminwilcox/Projects/active/ParkFinder/.build/debug/ParkFinder.build/master.swiftdeps"
+  },
+  "/Users/benjaminwilcox/Projects/active/ParkFinder/ParkFinder/AppDelegate.swift": {
+    "dependencies": "/Users/benjaminwilcox/Projects/active/ParkFinder/.build/debug/ParkFinder.build/AppDelegate.d",
+    "object": "/Users/benjaminwilcox/Projects/active/ParkFinder/.build/debug/ParkFinder.build/AppDelegate.swift.o",
+    "swiftmodule": "/Users/benjaminwilcox/Projects/active/ParkFinder/.build/debug/ParkFinder.build/AppDelegate~partial.swiftmodule",
+    "swift-dependencies": "/Users/benjaminwilcox/Projects/active/ParkFinder/.build/debug/ParkFinder.build/AppDelegate.swiftdeps"
+  },
+  "/Users/benjaminwilcox/Projects/active/ParkFinder/ParkFinder/ViewController.swift": {
+    "dependencies": "/Users/benjaminwilcox/Projects/active/ParkFinder/.build/debug/ParkFinder.build/ViewController.d",
+    "object": "/Users/benjaminwilcox/Projects/active/ParkFinder/.build/debug/ParkFinder.build/ViewController.swift.o",
+    "swiftmodule": "/Users/benjaminwilcox/Projects/active/ParkFinder/.build/debug/ParkFinder.build/ViewController~partial.swiftmodule",
+    "swift-dependencies": "/Users/benjaminwilcox/Projects/active/ParkFinder/.build/debug/ParkFinder.build/ViewController.swiftdeps"
+  }
+}
