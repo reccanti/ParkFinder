@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let park1 = StatePark(name:"Letchworth State Park", latitude: 42.685, longitude: -77.95944)
+        print(park1)
     }
 
     override func didReceiveMemoryWarning() {

@@ -15,6 +15,7 @@
 		B75742E41E91F2B700D9F2AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B75742E21E91F2B700D9F2AF /* LaunchScreen.storyboard */; };
 		B75742ED1E91F2C300D9F2AF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75742EC1E91F2C300D9F2AF /* MapKit.framework */; };
 		B75742F01E9201CF00D9F2AF /* parks.js in Resources */ = {isa = PBXBuildFile; fileRef = B75742EF1E9201CF00D9F2AF /* parks.js */; };
+		B75742F31E92036900D9F2AF /* StatePark.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75742F21E92036900D9F2AF /* StatePark.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		B75742E51E91F2B700D9F2AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B75742EC1E91F2C300D9F2AF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B75742EF1E9201CF00D9F2AF /* parks.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = parks.js; path = ../../../../Downloads/parks.js; sourceTree = "<group>"; };
+		B75742F21E92036900D9F2AF /* StatePark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatePark.swift; sourceTree = "<group>"; };
 		E468969EB0D63E20F556E0B7 /* Pods_ParkFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -67,8 +69,9 @@
 			isa = PBXGroup;
 			children = (
 				B75742D91E91F2B700D9F2AF /* AppDelegate.swift */,
+				B75742F41E92041700D9F2AF /* ViewControllers */,
+				B75742F11E92034C00D9F2AF /* Models */,
 				B75742EE1E9201AA00D9F2AF /* Data */,
-				B75742DB1E91F2B700D9F2AF /* ViewController.swift */,
 				B75742DD1E91F2B700D9F2AF /* Main.storyboard */,
 				B75742E01E91F2B700D9F2AF /* Assets.xcassets */,
 				B75742E21E91F2B700D9F2AF /* LaunchScreen.storyboard */,
@@ -92,6 +95,22 @@
 				B75742EF1E9201CF00D9F2AF /* parks.js */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		B75742F11E92034C00D9F2AF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B75742F21E92036900D9F2AF /* StatePark.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B75742F41E92041700D9F2AF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B75742DB1E91F2B700D9F2AF /* ViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		DB437B24723685BCB4F27C68 /* Pods */ = {
@@ -235,6 +254,7 @@
 			files = (
 				B75742DC1E91F2B700D9F2AF /* ViewController.swift in Sources */,
 				B75742DA1E91F2B700D9F2AF /* AppDelegate.swift in Sources */,
+				B75742F31E92036900D9F2AF /* StatePark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
