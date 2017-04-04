@@ -46,18 +46,40 @@ class ParkDetailTableVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "plainCell", for: indexPath)
 
-        if indexPath.section == MySection.title.rawValue {
+        switch indexPath.section {
+        case MySection.title.rawValue:
             // set a bunch of values for the first section
             cell.textLabel?.text = park?.title
             cell.textLabel?.textColor = UIColor.black
             cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 20.0)
             cell.textLabel?.numberOfLines = 1
             cell.textLabel?.textAlignment = .left
-        } else {
+            
+        case MySection.description.rawValue:
+            cell.textLabel?.text = park?.description
+            cell.textLabel?.textColor = UIColor.black
+            cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
+            cell.textLabel?.numberOfLines = 0
+            cell.textLabel?.textAlignment = .left
+            
+        default:
             cell.textLabel?.text = "TBD"
         }
 
         return cell
+    }
+    
+    /**
+     * Set the height for each specific section
+     */
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == MySection.title.rawValue {
+            return 54.0
+        }
+        if indexPath.section == MySection.description.rawValue {
+            return 120.0
+        }
+        return 44.0
     }
 
     /*
