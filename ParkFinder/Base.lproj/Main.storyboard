@@ -57,16 +57,16 @@
             </objects>
             <point key="canvasLocation" x="-1134" y="125"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Parks TableVC-->
         <scene sceneID="4Qz-w3-fcH">
             <objects>
-                <tableViewController id="0R3-ga-gaP" sceneMemberID="viewController">
+                <tableViewController id="0R3-ga-gaP" customClass="ParksTableVC" customModule="ParkFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="32g-pa-IqH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Uf7-qs-nBg">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="parkCell" id="Uf7-qs-nBg">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uf7-qs-nBg" id="CZR-Bd-lv4">
