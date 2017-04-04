@@ -18,6 +18,7 @@
 		B75742F31E92036900D9F2AF /* StatePark.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75742F21E92036900D9F2AF /* StatePark.swift */; };
 		B75742F61E93586900D9F2AF /* ParksTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75742F51E93586900D9F2AF /* ParksTableVC.swift */; };
 		B75742F91E93600E00D9F2AF /* ParkData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75742F81E93600E00D9F2AF /* ParkData.swift */; };
+		B75742FD1E9363EA00D9F2AF /* ParkDetailTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75742FC1E9363EA00D9F2AF /* ParkDetailTableVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		B75742F21E92036900D9F2AF /* StatePark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatePark.swift; sourceTree = "<group>"; };
 		B75742F51E93586900D9F2AF /* ParksTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParksTableVC.swift; sourceTree = "<group>"; };
 		B75742F81E93600E00D9F2AF /* ParkData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkData.swift; sourceTree = "<group>"; };
+		B75742FC1E9363EA00D9F2AF /* ParkDetailTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkDetailTableVC.swift; sourceTree = "<group>"; };
 		E468969EB0D63E20F556E0B7 /* Pods_ParkFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -115,6 +117,7 @@
 			children = (
 				B75742DB1E91F2B700D9F2AF /* ViewController.swift */,
 				B75742F51E93586900D9F2AF /* ParksTableVC.swift */,
+				B75742FC1E9363EA00D9F2AF /* ParkDetailTableVC.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				B75742DA1E91F2B700D9F2AF /* AppDelegate.swift in Sources */,
 				B75742F91E93600E00D9F2AF /* ParkData.swift in Sources */,
 				B75742F31E92036900D9F2AF /* StatePark.swift in Sources */,
+				B75742FD1E9363EA00D9F2AF /* ParkDetailTableVC.swift in Sources */,
 				B75742F61E93586900D9F2AF /* ParksTableVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
