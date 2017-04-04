@@ -62,6 +62,20 @@ class ParkDetailTableVC: UITableViewController {
             cell.textLabel?.numberOfLines = 0
             cell.textLabel?.textAlignment = .left
             
+        case MySection.favorite.rawValue:
+            cell.textLabel?.text = "Favorite"
+            cell.textLabel?.textColor = view.tintColor // "hyperlink blue" by default
+            cell.textLabel?.font = UIFont.systemFont(ofSize: 18.0)
+            cell.textLabel?.numberOfLines = 1
+            cell.textLabel?.textAlignment = .center
+            
+        case MySection.viewOnMap.rawValue:
+            cell.textLabel?.text = "View On Map"
+            cell.textLabel?.textColor = view.tintColor // "hyperlink blue" by default
+            cell.textLabel?.font = UIFont.systemFont(ofSize: 18.0)
+            cell.textLabel?.numberOfLines = 1
+            cell.textLabel?.textAlignment = .center
+            
         default:
             cell.textLabel?.text = "TBD"
         }
@@ -80,6 +94,18 @@ class ParkDetailTableVC: UITableViewController {
             return 120.0
         }
         return 44.0
+    }
+    
+    /**
+     * Detect button taps
+     */
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == MySection.favorite.rawValue {
+            print("favorite section tapped")
+        }
+        if indexPath.section == MySection.viewOnMap.rawValue {
+            print("viewOnMap section tapped")
+        }
     }
 
     /*

@@ -142,5 +142,16 @@ class ViewController: UIViewController, MKMapViewDelegate {
         print("Tapped info button for \(annotation.description)")
         print("Maybe we could do something interesting here, like go to a related URL, open the maps app and show the location, or show some park info in a new VC or tab.")
     }
+    
+    // MARK: - Notifications -
+    func showMap(notification: NSNotification) {
+        // change to map tab - this works as long as the map is on the first tab
+        tabBarController?.selectedIndex = 0
+        
+        // select the park annotation that was passed over
+        if let park = notification.userInfo!["park"] as? MKAnnotation {
+            mapView.selectAnnotation(park, animated: true)
+        }
+    }
 }
 
