@@ -10,9 +10,17 @@ import UIKit
 
 class ParkDetailTableVC: UITableViewController {
 
+    // MARK: - ivars -
+    var park:StatePark?
+    let myNumSections = 4
+    enum MySection: Int {
+        case title = 0, description, favorite, viewOnMap
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = park?.title
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -28,24 +36,29 @@ class ParkDetailTableVC: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return myNumSections
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "plainCell", for: indexPath)
 
-        // Configure the cell...
+        if indexPath.section == MySection.title.rawValue {
+            // set a bunch of values for the first section
+            cell.textLabel?.text = park?.title
+            cell.textLabel?.textColor = UIColor.black
+            cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 20.0)
+            cell.textLabel?.numberOfLines = 1
+            cell.textLabel?.textAlignment = .left
+        } else {
+            cell.textLabel?.text = "TBD"
+        }
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

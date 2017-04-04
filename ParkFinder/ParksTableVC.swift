@@ -89,14 +89,28 @@ class ParksTableVC: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        /*
+         * if the user has selected a list item, get the selected
+         * row, check to make sure that it corresponds to an item
+         * in the shared park data list, and set the park property
+         * of the ParkDetailVC to the selected park at that index
+         */
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let selectedRow = indexPath.row
+            guard selectedRow < ParkData.sharedData.parks.count else {
+                print("row \(selectedRow) is not in parks")
+                return
+            }
+            let detailVC = segue.destination as! ParkDetailTableVC
+            detailVC.park = ParkData.sharedData.parks[selectedRow]
+        }
     }
-    */
 
 }
