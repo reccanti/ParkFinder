@@ -5,10 +5,12 @@
 //  Created by Benjamin Wilcox on 4/3/17.
 //  Copyright © 2017 Benjamin Wilcox. All rights reserved.
 //
-
 import Foundation
 
-public class StatePark:NSObject {
+import MapKit
+import CoreLocation
+
+public class StatePark:NSObject, MKAnnotation {
     
     private var name:String
     private var latitude:Float
@@ -22,5 +24,20 @@ public class StatePark:NSObject {
     
     public override var description:String {
         return "\(name) : (\(latitude),\(longitude))"
+    }
+    
+    public var coordinate:CLLocationCoordinate2D {
+        return CLLocationCoordinate2DMake(CLLocationDegrees(latitude), CLLocationDegrees(longitude))
+    }
+    
+    // Computed properties
+    // These are optional in the MKAnnotationprotocol,
+    // which means that the map will call them if they exist
+    public var title:String? {
+        return name
+    }
+    
+    public var subtitle:String? {
+        return "I ❤️ NY"
     }
 }

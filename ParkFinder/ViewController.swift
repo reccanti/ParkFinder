@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import MapKit
 import SwiftyJSON
 
 class ViewController: UIViewController {
 
+    // MARK: - ivars
+    @IBOutlet weak var mapView: MKMapView!
+    let metersPerMile: Double = 1609.344
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -82,6 +87,17 @@ class ViewController: UIViewController {
 //            print("fakeProperty=\(fakeProperty)") // 0
         }
         print(parks)
+        
+        // add annotations to the map
+        mapView.addAnnotations(parks)
+        
+        // start zoomed in
+        let myRegion = MKCoordinateRegionMakeWithDistance(parks[0].coordinate, metersPerMile * 100, metersPerMile * 100)
+        
+        mapView.setRegion(myRegion, animated: true)
+        mapView.selectAnnotation(parks[0], animated: true)
+        
+        
     }
 
 
