@@ -90,6 +90,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         mapView.setRegion(myRegion, animated: true)
         mapView.selectAnnotation(parks[0], animated: true)
+        
+        ParkData.sharedData.parks = parks
     }
     
     // MARK: - MapViewDelegate Protocol Methods -

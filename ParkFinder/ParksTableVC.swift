@@ -11,15 +11,10 @@ import UIKit
 class ParksTableVC: UITableViewController {
 
     // MARK: - ivars -
-    var parks = [StatePark]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Parks"
-        parks = [
-            StatePark(name: "Letchworth State Park", latitude: 42.685, longitude: -77.95944),
-            StatePark(name: "Hamlin Beach State Park", latitude: 43.36139, longitude: -77.95861)
-        ]
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -44,7 +39,7 @@ class ParksTableVC: UITableViewController {
      * set the number of rows equal to the number of items in the parks array
      */
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return parks.count
+        return ParkData.sharedData.parks.count
     }
 
     /**
@@ -54,7 +49,7 @@ class ParksTableVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "parkCell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = parks[indexPath.row].title
+        cell.textLabel?.text = ParkData.sharedData.parks[indexPath.row].title
 
         return cell
     }

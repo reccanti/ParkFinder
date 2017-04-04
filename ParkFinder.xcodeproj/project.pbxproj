@@ -17,6 +17,7 @@
 		B75742F01E9201CF00D9F2AF /* parks.js in Resources */ = {isa = PBXBuildFile; fileRef = B75742EF1E9201CF00D9F2AF /* parks.js */; };
 		B75742F31E92036900D9F2AF /* StatePark.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75742F21E92036900D9F2AF /* StatePark.swift */; };
 		B75742F61E93586900D9F2AF /* ParksTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75742F51E93586900D9F2AF /* ParksTableVC.swift */; };
+		B75742F91E93600E00D9F2AF /* ParkData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75742F81E93600E00D9F2AF /* ParkData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		B75742EF1E9201CF00D9F2AF /* parks.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = parks.js; path = ../../../../Downloads/parks.js; sourceTree = "<group>"; };
 		B75742F21E92036900D9F2AF /* StatePark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatePark.swift; sourceTree = "<group>"; };
 		B75742F51E93586900D9F2AF /* ParksTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParksTableVC.swift; sourceTree = "<group>"; };
+		B75742F81E93600E00D9F2AF /* ParkData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkData.swift; sourceTree = "<group>"; };
 		E468969EB0D63E20F556E0B7 /* Pods_ParkFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				B75742D91E91F2B700D9F2AF /* AppDelegate.swift */,
+				B75742F71E935FF500D9F2AF /* Singletons */,
 				B75742F41E92041700D9F2AF /* ViewControllers */,
 				B75742F11E92034C00D9F2AF /* Models */,
 				B75742EE1E9201AA00D9F2AF /* Data */,
@@ -114,6 +117,14 @@
 				B75742F51E93586900D9F2AF /* ParksTableVC.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B75742F71E935FF500D9F2AF /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				B75742F81E93600E00D9F2AF /* ParkData.swift */,
+			);
+			name = Singletons;
 			sourceTree = "<group>";
 		};
 		DB437B24723685BCB4F27C68 /* Pods */ = {
@@ -257,6 +268,7 @@
 			files = (
 				B75742DC1E91F2B700D9F2AF /* ViewController.swift in Sources */,
 				B75742DA1E91F2B700D9F2AF /* AppDelegate.swift in Sources */,
+				B75742F91E93600E00D9F2AF /* ParkData.swift in Sources */,
 				B75742F31E92036900D9F2AF /* StatePark.swift in Sources */,
 				B75742F61E93586900D9F2AF /* ParksTableVC.swift in Sources */,
 			);
