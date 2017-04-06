@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4EC289D4C52B431EB0922724 /* Pods_ParkFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E468969EB0D63E20F556E0B7 /* Pods_ParkFinder.framework */; };
+		B7036D2F1E9691C600D9A1A2 /* parks.js in Resources */ = {isa = PBXBuildFile; fileRef = B7036D2E1E9691C600D9A1A2 /* parks.js */; };
 		B75742DA1E91F2B700D9F2AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75742D91E91F2B700D9F2AF /* AppDelegate.swift */; };
 		B75742DC1E91F2B700D9F2AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75742DB1E91F2B700D9F2AF /* ViewController.swift */; };
 		B75742DF1E91F2B700D9F2AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B75742DD1E91F2B700D9F2AF /* Main.storyboard */; };
 		B75742E11E91F2B700D9F2AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B75742E01E91F2B700D9F2AF /* Assets.xcassets */; };
 		B75742E41E91F2B700D9F2AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B75742E21E91F2B700D9F2AF /* LaunchScreen.storyboard */; };
 		B75742ED1E91F2C300D9F2AF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75742EC1E91F2C300D9F2AF /* MapKit.framework */; };
-		B75742F01E9201CF00D9F2AF /* parks.js in Resources */ = {isa = PBXBuildFile; fileRef = B75742EF1E9201CF00D9F2AF /* parks.js */; };
 		B75742F31E92036900D9F2AF /* StatePark.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75742F21E92036900D9F2AF /* StatePark.swift */; };
 		B75742F61E93586900D9F2AF /* ParksTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75742F51E93586900D9F2AF /* ParksTableVC.swift */; };
 		B75742F91E93600E00D9F2AF /* ParkData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75742F81E93600E00D9F2AF /* ParkData.swift */; };
@@ -24,6 +24,7 @@
 /* Begin PBXFileReference section */
 		26393E5C7BF26F179969AD90 /* Pods-ParkFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParkFinder/Pods-ParkFinder.release.xcconfig"; sourceTree = "<group>"; };
 		79675689E7CBB49A09D06516 /* Pods-ParkFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParkFinder/Pods-ParkFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		B7036D2E1E9691C600D9A1A2 /* parks.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = parks.js; sourceTree = "<group>"; };
 		B75742D61E91F2B700D9F2AF /* ParkFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B75742D91E91F2B700D9F2AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B75742DB1E91F2B700D9F2AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -32,7 +33,6 @@
 		B75742E31E91F2B700D9F2AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B75742E51E91F2B700D9F2AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B75742EC1E91F2C300D9F2AF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		B75742EF1E9201CF00D9F2AF /* parks.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = parks.js; path = ../../../../Downloads/parks.js; sourceTree = "<group>"; };
 		B75742F21E92036900D9F2AF /* StatePark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatePark.swift; sourceTree = "<group>"; };
 		B75742F51E93586900D9F2AF /* ParksTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParksTableVC.swift; sourceTree = "<group>"; };
 		B75742F81E93600E00D9F2AF /* ParkData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkData.swift; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 		B75742EE1E9201AA00D9F2AF /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				B75742EF1E9201CF00D9F2AF /* parks.js */,
+				B7036D2E1E9691C600D9A1A2 /* parks.js */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -207,7 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B75742F01E9201CF00D9F2AF /* parks.js in Resources */,
+				B7036D2F1E9691C600D9A1A2 /* parks.js in Resources */,
 				B75742E41E91F2B700D9F2AF /* LaunchScreen.storyboard in Resources */,
 				B75742E11E91F2B700D9F2AF /* Assets.xcassets in Resources */,
 				B75742DF1E91F2B700D9F2AF /* Main.storyboard in Resources */,
