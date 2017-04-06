@@ -10,6 +10,8 @@ import UIKit
 import MapKit
 import SwiftyJSON
 
+let showParkNotification = NSNotification.Name("showParkNotification")
+
 class ViewController: UIViewController, MKMapViewDelegate {
 
     // MARK: - ivars
@@ -18,8 +20,24 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // set the mapView delegate to self
         mapView.delegate = self
+        
+        // listen for showMap notifications
+        let nc = NotificationCenter.default
+        nc.addObserver(self, selector: #selector(showMap), name: showParkNotification, object: nil)
+        
+        // load location data for pins
         loadData()
+    }
+    
+    /**
+     * Deinitialize the ViewController
+     */
+    deinit {
+        // remove notification reference
+        NotificationCenter.default.removeObserver(self)
     }
 
     override func didReceiveMemoryWarning() {

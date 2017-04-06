@@ -100,11 +100,15 @@ class ParkDetailTableVC: UITableViewController {
      * Detect button taps
      */
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         if indexPath.section == MySection.favorite.rawValue {
             print("favorite section tapped")
         }
         if indexPath.section == MySection.viewOnMap.rawValue {
-            print("viewOnMap section tapped")
+            //            print("viewOnMap section tapped")
+            let nc = NotificationCenter.default
+            let data = ["park":park]
+            nc.post(name: showParkNotification, object: self, userInfo: data)
         }
     }
 
