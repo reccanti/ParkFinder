@@ -49,7 +49,7 @@ class ParksTableVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "parkCell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = ParkData.sharedData.parks[indexPath.row].title
+        cell.textLabel?.text = ParkData.sharedData.sortedParks[indexPath.row].title
 
         return cell
     }

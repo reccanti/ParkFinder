@@ -10,7 +10,7 @@ import Foundation
 import MapKit
 import CoreLocation
 
-public class StatePark:NSObject, MKAnnotation {
+public class StatePark:NSObject, MKAnnotation, Comparable {
     
     private var name:String
     private var latitude:Float
@@ -39,5 +39,14 @@ public class StatePark:NSObject, MKAnnotation {
     
     public var subtitle:String? {
         return "I ❤️ NY"
+    }
+    
+    // MARK: - Comparable Protocol methods
+    public static func == (lhs: StatePark, rhs: StatePark) -> Bool {
+        return lhs.name == rhs.name
+    }
+    
+    public static func < (lhs: StatePark, rhs: StatePark) -> Bool {
+        return lhs.name < rhs.name
     }
 }

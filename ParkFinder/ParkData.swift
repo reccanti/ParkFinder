@@ -11,6 +11,11 @@ import Foundation
 public class ParkData {
     static let sharedData = ParkData()
     var parks = [StatePark]()
+    var sortedParks: [StatePark] {
+        return parks.sorted {
+            $0 < $1
+        }
+    }
     
     private init() {}
 }
