@@ -117,8 +117,14 @@ class ViewController: UIViewController, MKMapViewDelegate {
     /**
      * Opens the URL of the given StatePark
      */
-    func openURL() {
-        
+    func openURL(forStatePark park: StatePark) {
+        UIApplication.shared.open(
+            park.url,
+            options: [:],
+            completionHandler: {
+                (success) in
+                print("Open \(park.url) - success = \(success)")
+            })
     }
     
     // MARK: - MapViewDelegate Protocol Methods -
@@ -166,8 +172,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
             print("This annotation isn't a StatePark")
             return
         }
-        print("Tapped info button for \(annotation.description)")
-        print("Maybe we could do something interesting here, like go to a related URL, open the maps app and show the location, or show some park info in a new VC or tab.")
+        openURL(forStatePark: annotation)
     }
     
     // MARK: - Notifications -
