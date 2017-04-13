@@ -12,9 +12,9 @@ class ParkDetailTableVC: UITableViewController {
 
     // MARK: - ivars -
     var park:StatePark?
-    let myNumSections = 4
+    let myNumSections = 5
     enum MySection: Int {
-        case title = 0, description, favorite, viewOnMap
+        case title = 0, description, favorite, viewOnMap, share
     }
     
     override func viewDidLoad() {
@@ -76,6 +76,13 @@ class ParkDetailTableVC: UITableViewController {
             cell.textLabel?.numberOfLines = 1
             cell.textLabel?.textAlignment = .center
             
+        case MySection.share.rawValue:
+            cell.textLabel?.text = "Share"
+            cell.textLabel?.textColor = view.tintColor // "hyperlink blue" by default
+            cell.textLabel?.font = UIFont.systemFont(ofSize: 18.0)
+            cell.textLabel?.numberOfLines = 1
+            cell.textLabel?.textAlignment = .center
+            
         default:
             cell.textLabel?.text = "TBD"
         }
@@ -101,14 +108,42 @@ class ParkDetailTableVC: UITableViewController {
      */
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        // add the park to favorites
         if indexPath.section == MySection.favorite.rawValue {
             print("favorite section tapped")
         }
+        
+        // display the park on the map view
         if indexPath.section == MySection.viewOnMap.rawValue {
-            //            print("viewOnMap section tapped")
             let nc = NotificationCenter.default
             let data = ["park":park]
             nc.post(name: showParkNotification, object: self, userInfo: data)
+        }
+        
+        // share park details on social media
+        if indexPath.section == MySection.share.rawValue {
+            
+            var activityItems = [AnyObject]()
+            if park != nil {
+                // define the information we want to share
+                let titleText = park!.title
+                let descriptionText = "It's located at \(park!.description) (Or, you know, you could just google it ;)\n"
+                let URLDescriptionText = "Check it out at: "
+                let URLText = park!.url
+                activityItems = [titleText as AnyObject, descriptionText as AnyObject, URLDescriptionText as AnyObject, URLText as NSURL]
+            } else {
+                activityItems = [ "No information present" as AnyObject]
+            }
+            
+            let activityVC = UIActivityViewController(
+                activityItems: activityItems,
+                applicationActivities: nil
+            )
+            activityVC.excludedActivityTypes = [UIActivityType.print]
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                activityVC.popoverPresentationController?.sourceView = self.view
+            }
+            self.present(activityVC, animated:true, completion: nil)
         }
     }
 
