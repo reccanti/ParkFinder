@@ -91,7 +91,9 @@ class ViewController: UIViewController, MKMapViewDelegate {
             let latitude = d["latitude"].floatValue
             let longitude = d["longitude"].floatValue
             
-            let park = StatePark(name: name, latitude: latitude, longitude: longitude)
+            let url = d["url"].stringValue
+            
+            let park = StatePark(name: name, latitude: latitude, longitude: longitude, url: url)
             parks.append(park)
             
             // SwiftyJSON returns "" or 0 if the property doesn't exist
@@ -110,6 +112,13 @@ class ViewController: UIViewController, MKMapViewDelegate {
         mapView.selectAnnotation(parks[0], animated: true)
         
         ParkData.sharedData.parks = parks
+    }
+    
+    /**
+     * Opens the URL of the given StatePark
+     */
+    func openURL() {
+        
     }
     
     // MARK: - MapViewDelegate Protocol Methods -

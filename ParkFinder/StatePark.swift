@@ -9,6 +9,7 @@ import Foundation
 
 import MapKit
 import CoreLocation
+import UIKit
 
 public class StatePark:NSObject, MKAnnotation, Comparable {
     
@@ -16,10 +17,13 @@ public class StatePark:NSObject, MKAnnotation, Comparable {
     private var latitude:Float
     private var longitude:Float
     
-    init(name:String, latitude:Float, longitude:Float) {
+    public var url: URL
+    
+    init(name:String, latitude:Float, longitude:Float, url:String) {
         self.name = name
         self.latitude = latitude
         self.longitude = longitude
+        self.url = URL(string: url)!
     }
     
     public override var description:String {
