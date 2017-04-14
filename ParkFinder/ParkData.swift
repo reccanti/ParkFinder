@@ -45,6 +45,10 @@ public class ParkData {
         nc.post(name: updateFavoritesNotification, object: _favorites, userInfo: data)
     }
     
+    func removeFromFavorites(at: Int) {
+        _favorites.remove(at: at)
+    }
+    
     func getFavorites() -> [StatePark] {
         return _favorites
     }
