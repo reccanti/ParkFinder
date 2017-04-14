@@ -8,10 +8,15 @@
 
 import UIKit
 
+let updateFavoritesNotification = NSNotification.Name("updateFavoritesNotification")
+
 class FavoritesTableVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let nc = NotificationCenter.default
+        nc.addObserver(self, selector: #selector(updateFavoritesTable), name: updateFavoritesNotification, object: nil)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -29,23 +34,21 @@ class FavoritesTableVC: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return ParkData.sharedData.getFavorites().count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteCell", for: indexPath)
         // Configure the cell...
+        cell.textLabel?.text = ParkData.sharedData.getFavorites()[indexPath.row].title
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -91,5 +94,14 @@ class FavoritesTableVC: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: - Helpers
+    
+    /**
+     * Reloads the tableview
+     */
+    func updateFavoritesTable() {
+        self.tableView.reloadData()
+    }
 
 }
