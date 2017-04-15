@@ -63,7 +63,7 @@ class ParkDetailTableVC: UITableViewController {
             cell.textLabel?.textAlignment = .left
             
         case MySection.favorite.rawValue:
-            cell.textLabel?.text = "Favorite"
+            cell.textLabel?.text = "Add to Favorites"
             cell.textLabel?.textColor = view.tintColor // "hyperlink blue" by default
             cell.textLabel?.font = UIFont.systemFont(ofSize: 18.0)
             cell.textLabel?.numberOfLines = 1
@@ -107,10 +107,13 @@ class ParkDetailTableVC: UITableViewController {
      * Detect button taps
      */
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+
         // add the park to favorites
         if indexPath.section == MySection.favorite.rawValue {
             print("favorite section tapped")
+            if (park != nil) {
+                ParkData.sharedData.addToFavorites(park!)
+            }
         }
         
         // display the park on the map view
@@ -119,7 +122,6 @@ class ParkDetailTableVC: UITableViewController {
             let data = ["park":park]
             nc.post(name: showParkNotification, object: self, userInfo: data)
         }
-        
         // share park details on social media
         if indexPath.section == MySection.share.rawValue {
             

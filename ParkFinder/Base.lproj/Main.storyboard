@@ -115,18 +115,18 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LcJ-gb-cvL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-668" y="1900"/>
+            <point key="canvasLocation" x="-154" y="2185"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Favorites TableVC-->
         <scene sceneID="1BK-GC-cdn">
             <objects>
-                <tableViewController id="SDY-G4-oF8" sceneMemberID="viewController">
+                <tableViewController id="SDY-G4-oF8" customClass="FavoritesTableVC" customModule="ParkFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="pLj-Py-R9V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3Ad-hr-7fU">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteCell" id="3Ad-hr-7fU">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Ad-hr-7fU" id="Mk3-9r-OSR">
