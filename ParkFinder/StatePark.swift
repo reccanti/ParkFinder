@@ -19,6 +19,10 @@ public class StatePark:NSObject, MKAnnotation, Comparable {
     
     public var url: URL
     
+    /**
+     * Initializes the StatePark with its name,
+     * location, and url
+     */
     init(name:String, latitude:Float, longitude:Float, url:String) {
         self.name = name
         self.latitude = latitude
@@ -26,10 +30,12 @@ public class StatePark:NSObject, MKAnnotation, Comparable {
         self.url = URL(string: url)!
     }
     
+    // MARK: - NSObject properties
     public override var description:String {
         return "\(name) : (\(latitude),\(longitude))"
     }
     
+    // MARK: - MKAnnotation properties
     public var coordinate:CLLocationCoordinate2D {
         return CLLocationCoordinate2DMake(CLLocationDegrees(latitude), CLLocationDegrees(longitude))
     }

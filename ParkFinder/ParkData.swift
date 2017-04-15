@@ -14,6 +14,9 @@ public class ParkData {
     // an array that holds park data
     var parks = [StatePark]()
     
+    // a reference to NotificationCenter
+    let nc = NotificationCenter.default
+    
     // a computed property that returns the sorted parks array
     var sortedParks: [StatePark] {
         return parks.sorted {
@@ -28,30 +31,35 @@ public class ParkData {
     
     // an array that holds parks that have been favorited
     private var _favorites = [StatePark]()
-//    var favorites: [StatePark] {
-//        set(newValue) {
-//            let nc = NotificationCenter.default
-//            nc.post(name: updateFavoritesNotification, object: favorites, userInfo: nil)
-//        }
-//        get {
-//            
-//        }
-//    }
     
+    /**
+     * Adds a StatePark to the favorites array and
+     * updates the necessary items
+     */
     func addToFavorites(_ park:StatePark) {
         _favorites.append(park)
-        let nc = NotificationCenter.default
         nc.post(name: updateFavoritesNotification, object: _favorites, userInfo: nil)
     }
     
+    /**
+     * Inserts a StatePark into the favorites array
+     * and updates the necessary items
+     */
     func insertIntoFavorites(_ park:StatePark, at:Int) {
         _favorites.insert(park, at: at)
     }
     
+    /**
+     * Removes a StatePark into the favorites array
+     * and updates the necessary items
+     */
     func removeFromFavorites(at: Int) -> StatePark {
         return _favorites.remove(at: at)
     }
     
+    /**
+     * return a reference to the favorites array
+     */
     func getFavorites() -> [StatePark] {
         return _favorites
     }
