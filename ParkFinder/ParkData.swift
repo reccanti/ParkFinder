@@ -41,12 +41,15 @@ public class ParkData {
     func addToFavorites(_ park:StatePark) {
         _favorites.append(park)
         let nc = NotificationCenter.default
-        let data = ["park":park]
-        nc.post(name: updateFavoritesNotification, object: _favorites, userInfo: data)
+        nc.post(name: updateFavoritesNotification, object: _favorites, userInfo: nil)
     }
     
-    func removeFromFavorites(at: Int) {
-        _favorites.remove(at: at)
+    func insertIntoFavorites(_ park:StatePark, at:Int) {
+        _favorites.insert(park, at: at)
+    }
+    
+    func removeFromFavorites(at: Int) -> StatePark {
+        return _favorites.remove(at: at)
     }
     
     func getFavorites() -> [StatePark] {

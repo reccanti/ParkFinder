@@ -21,7 +21,7 @@ class FavoritesTableVC: UITableViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-         self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,7 +61,7 @@ class FavoritesTableVC: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            ParkData.sharedData.removeFromFavorites(at: indexPath.row)
+            _ = ParkData.sharedData.removeFromFavorites(at: indexPath.row)
             print(ParkData.sharedData.getFavorites())
             
             tableView.deleteRows(at: [indexPath], with: .fade)
@@ -69,12 +69,12 @@ class FavoritesTableVC: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    /*
+    
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+        let favoriteToMove = ParkData.sharedData.removeFromFavorites(at: fromIndexPath.row)
+        ParkData.sharedData.insertIntoFavorites(favoriteToMove, at: to.row)
     }
-    */
 
     /*
     // Override to support conditional rearranging of the table view.
