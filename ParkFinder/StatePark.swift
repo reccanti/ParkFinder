@@ -16,6 +16,7 @@ public class StatePark:NSObject, MKAnnotation, Comparable, NSCoding {
     private var name:String
     private var latitude:Float
     private var longitude:Float
+    private var parkDescription:String
     
     public var url: URL
     
@@ -24,6 +25,7 @@ public class StatePark:NSObject, MKAnnotation, Comparable, NSCoding {
         case latitudeKey = "latitude"
         case longitudeKey = "longitude"
         case urlKey = "url"
+        case descriptionKey = "description"
     }
     
     // MARK: - various initializers
@@ -32,11 +34,12 @@ public class StatePark:NSObject, MKAnnotation, Comparable, NSCoding {
      * Initializes the StatePark with its name,
      * location, and url
      */
-    init(name:String, latitude:Float, longitude:Float, url:String) {
+    init(name:String, latitude:Float, longitude:Float, url:String, description:String) {
         self.name = name
         self.latitude = latitude
         self.longitude = longitude
         self.url = URL(string: url)!
+        self.parkDescription = description
     }
     
     /**
@@ -48,11 +51,12 @@ public class StatePark:NSObject, MKAnnotation, Comparable, NSCoding {
         self.latitude = aDecoder.decodeFloat(forKey: ParkKey.latitudeKey.rawValue)
         self.longitude = aDecoder.decodeFloat(forKey: ParkKey.longitudeKey.rawValue)
         self.url = aDecoder.decodeObject(forKey: ParkKey.urlKey.rawValue) as! URL
+        self.parkDescription = aDecoder.decodeObject(forKey: ParkKey.descriptionKey.rawValue) as! String
     }
     
     // MARK: - NSObject properties
     public override var description:String {
-        return "\(name) : (\(latitude),\(longitude))"
+        return parkDescription
     }
     
     // MARK: - MKAnnotation properties
@@ -68,7 +72,7 @@ public class StatePark:NSObject, MKAnnotation, Comparable, NSCoding {
     }
     
     public var subtitle:String? {
-        return "I ❤️ NY"
+        return description
     }
     
     // MARK: - Comparable Protocol methods
@@ -86,5 +90,6 @@ public class StatePark:NSObject, MKAnnotation, Comparable, NSCoding {
         aCoder.encode(url, forKey: ParkKey.urlKey.rawValue)
         aCoder.encode(latitude, forKey: ParkKey.latitudeKey.rawValue)
         aCoder.encode(longitude, forKey: ParkKey.longitudeKey.rawValue)
+        aCoder.encode(parkDescription, forKey: ParkKey.descriptionKey.rawValue)
     }
 }

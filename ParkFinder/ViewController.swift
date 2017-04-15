@@ -86,6 +86,10 @@ class ViewController: UIViewController, MKMapViewDelegate {
             if name.isEmpty {
                 name = "No title found"
             }
+            var description = d["description"].stringValue
+            if description.isEmpty {
+                description = "No description found"
+            }
             
             // no optional binding necessary!
             let latitude = d["latitude"].floatValue
@@ -93,7 +97,13 @@ class ViewController: UIViewController, MKMapViewDelegate {
             
             let url = d["url"].stringValue
             
-            let park = StatePark(name: name, latitude: latitude, longitude: longitude, url: url)
+            let park = StatePark(
+                name: name,
+                latitude: latitude,
+                longitude: longitude,
+                url: url, description:
+                description)
+            
             parks.append(park)
         }
         
