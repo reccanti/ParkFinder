@@ -11,13 +11,15 @@ import MapKit
 import CoreLocation
 import UIKit
 
-public class StatePark:NSObject, MKAnnotation, Comparable {
+public class StatePark:NSObject, MKAnnotation, Comparable, NSCoding {
     
     private var name:String
     private var latitude:Float
     private var longitude:Float
     
     public var url: URL
+    
+    // MARK: - various initializers
     
     /**
      * Initializes the StatePark with its name,
@@ -29,6 +31,19 @@ public class StatePark:NSObject, MKAnnotation, Comparable {
         self.longitude = longitude
         self.url = URL(string: url)!
     }
+    
+    /**
+     * Initializes a StatePark by decoding an
+     * object. Part of the NSCoding protocol
+     */
+    public required init(coder aDecoder:NSCoder) {
+        self.name = aDecoder.decodeObject(forKey: "name") as! String
+        self.latitude = aDecoder.decodeObject(forKey: "latitude") as! Float
+        self.longitude = aDecoder.decodeObject(forKey: "longitude") as! Float
+        self.url = aDecoder.decodeObject(forKey: "url") as! URL
+    }
+    
+    
     
     // MARK: - NSObject properties
     public override var description:String {
@@ -58,5 +73,13 @@ public class StatePark:NSObject, MKAnnotation, Comparable {
     
     public static func < (lhs: StatePark, rhs: StatePark) -> Bool {
         return lhs.name < rhs.name
+    }
+    
+    // MARK: - NSCoding Protocol methods
+    public func encode(with aCoder: NSCoder) {
+        aCoder.encode(name, forKey: "name")
+        aCoder.encode(url, forKey: "url")
+        aCoder.encode(latitude, forKey: "latitude")
+        aCoder.encode(longitude, forKey: "longitude")
     }
 }
