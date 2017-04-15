@@ -44,9 +44,6 @@ public class StatePark:NSObject, MKAnnotation, Comparable, NSCoding {
      * object. Part of the NSCoding protocol
      */
     public required init(coder aDecoder:NSCoder) {
-        
-        print(aDecoder.decodeObject())
-        
         self.name = aDecoder.decodeObject(forKey: ParkKey.nameKey.rawValue) as! String
         self.latitude = aDecoder.decodeFloat(forKey: ParkKey.latitudeKey.rawValue)
         self.longitude = aDecoder.decodeFloat(forKey: ParkKey.longitudeKey.rawValue)
