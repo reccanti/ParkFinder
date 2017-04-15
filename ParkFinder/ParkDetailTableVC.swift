@@ -118,8 +118,7 @@ class ParkDetailTableVC: UITableViewController {
         // display the park on the map view
         if indexPath.section == MySection.viewOnMap.rawValue {
             let nc = NotificationCenter.default
-            let data = ["park":park]
-            nc.post(name: showParkNotification, object: self, userInfo: data)
+            nc.post(name: showParkNotification, object: self, userInfo: nil)
         }
         // share park details on social media
         if indexPath.section == MySection.share.rawValue {

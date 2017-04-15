@@ -127,7 +127,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
      * Detect when an annotation is tapped
      */
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        let title = view.annotation?.title ?? "No title found"
+//        let title = view.annotation?.title ?? "No title found"
     }
     
     /**

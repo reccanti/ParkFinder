@@ -24,11 +24,15 @@ public class ParkData {
         }
     }
     
+    // the name of the file that the favorites array
+    // will be stored in
+    let FAVORITES_FILE = "favorites.plist"
+    
     /**
      * initialize the ParkData
      */
     private init() {
-        loadFavorites()
+//        loadFavorites()
     }
     
     // MARK: - favorites methods
@@ -41,14 +45,21 @@ public class ParkData {
      * the filesystem
      */
     func loadFavorites() {
-        //
+        print("loading")
+        if FileManager.fileExistsInDocumentsDirectory(filename: FAVORITES_FILE) {
+            let pathToFile = FileManager.filePathInDocumentsDirectory(filename: FAVORITES_FILE)
+            _favorites = NSKeyedUnarchiver.unarchiveObject(withFile: pathToFile.path) as! [StatePark]
+            print("opened file at path \(pathToFile.path)")
+        }
     }
     
     /**
      * save the current favorites array to the filesystem
      */
     func saveFavorites() {
-        //
+        let pathToFile = FileManager.filePathInDocumentsDirectory(filename: FAVORITES_FILE)
+        let success = NSKeyedArchiver.archiveRootObject(_favorites, toFile: pathToFile.path)
+        print("Saved = \(success) to \(pathToFile.path)")
     }
     
     /**

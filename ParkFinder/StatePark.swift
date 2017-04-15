@@ -19,6 +19,13 @@ public class StatePark:NSObject, MKAnnotation, Comparable, NSCoding {
     
     public var url: URL
     
+    enum ParkKey: String {
+        case nameKey = "name"
+        case latitudeKey = "latitude"
+        case longitudeKey = "longitude"
+        case urlKey = "url"
+    }
+    
     // MARK: - various initializers
     
     /**
@@ -37,13 +44,14 @@ public class StatePark:NSObject, MKAnnotation, Comparable, NSCoding {
      * object. Part of the NSCoding protocol
      */
     public required init(coder aDecoder:NSCoder) {
-        self.name = aDecoder.decodeObject(forKey: "name") as! String
-        self.latitude = aDecoder.decodeObject(forKey: "latitude") as! Float
-        self.longitude = aDecoder.decodeObject(forKey: "longitude") as! Float
-        self.url = aDecoder.decodeObject(forKey: "url") as! URL
+        
+        print(aDecoder.decodeObject())
+        
+        self.name = aDecoder.decodeObject(forKey: ParkKey.nameKey.rawValue) as! String
+        self.latitude = aDecoder.decodeFloat(forKey: ParkKey.latitudeKey.rawValue)
+        self.longitude = aDecoder.decodeFloat(forKey: ParkKey.longitudeKey.rawValue)
+        self.url = aDecoder.decodeObject(forKey: ParkKey.urlKey.rawValue) as! URL
     }
-    
-    
     
     // MARK: - NSObject properties
     public override var description:String {
@@ -77,9 +85,9 @@ public class StatePark:NSObject, MKAnnotation, Comparable, NSCoding {
     
     // MARK: - NSCoding Protocol methods
     public func encode(with aCoder: NSCoder) {
-        aCoder.encode(name, forKey: "name")
-        aCoder.encode(url, forKey: "url")
-        aCoder.encode(latitude, forKey: "latitude")
-        aCoder.encode(longitude, forKey: "longitude")
+        aCoder.encode(name, forKey: ParkKey.nameKey.rawValue)
+        aCoder.encode(url, forKey: ParkKey.urlKey.rawValue)
+        aCoder.encode(latitude, forKey: ParkKey.latitudeKey.rawValue)
+        aCoder.encode(longitude, forKey: ParkKey.longitudeKey.rawValue)
     }
 }
