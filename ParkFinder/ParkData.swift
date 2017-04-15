@@ -24,13 +24,32 @@ public class ParkData {
         }
     }
     
+    /**
+     * initialize the ParkData
+     */
     private init() {
+        loadFavorites()
     }
     
     // MARK: - favorites methods
     
     // an array that holds parks that have been favorited
     private var _favorites = [StatePark]()
+    
+    /**
+     * initialize the favorites array by pulling it from
+     * the filesystem
+     */
+    func loadFavorites() {
+        //
+    }
+    
+    /**
+     * save the current favorites array to the filesystem
+     */
+    func saveFavorites() {
+        //
+    }
     
     /**
      * Adds a StatePark to the favorites array and

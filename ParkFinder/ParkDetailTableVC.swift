@@ -110,7 +110,6 @@ class ParkDetailTableVC: UITableViewController {
 
         // add the park to favorites
         if indexPath.section == MySection.favorite.rawValue {
-            print("favorite section tapped")
             if (park != nil) {
                 ParkData.sharedData.addToFavorites(park!)
             }

@@ -95,12 +95,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
             
             let park = StatePark(name: name, latitude: latitude, longitude: longitude, url: url)
             parks.append(park)
-            
-            // SwiftyJSON returns "" or 0 if the property doesn't exist
-//            let fakeProperty:Int = d["xyzpdq"].intValue as Int
-//            print("fakeProperty=\(fakeProperty)") // 0
         }
-        print(parks)
         
         // add annotations to the map
         mapView.addAnnotations(parks)
@@ -123,7 +118,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
             options: [:],
             completionHandler: {
                 (success) in
-                print("Open \(park.url) - success = \(success)")
             })
     }
     
@@ -134,7 +128,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
      */
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         let title = view.annotation?.title ?? "No title found"
-        print("Tapped \(title!)")
     }
     
     /**
