@@ -7,4 +7,5 @@ target 'ParkFinder' do
 
   # Pods for ParkFinder
   pod 'SwiftyJSON'
+  pod 'GVRSDK'
 end

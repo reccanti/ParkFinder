@@ -21,6 +21,7 @@
 		B75742FD1E9363EA00D9F2AF /* ParkDetailTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75742FC1E9363EA00D9F2AF /* ParkDetailTableVC.swift */; };
 		B7AABC651E9F42B900CDD49D /* FavoritesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AABC641E9F42B900CDD49D /* FavoritesTableVC.swift */; };
 		B7AF4B251EA29664005417FC /* FileExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AF4B241EA29664005417FC /* FileExtensions.swift */; };
+		B7AF4B2A1EA2F827005417FC /* ParkPanoramaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AF4B291EA2F827005417FC /* ParkPanoramaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		B75742FC1E9363EA00D9F2AF /* ParkDetailTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkDetailTableVC.swift; sourceTree = "<group>"; };
 		B7AABC641E9F42B900CDD49D /* FavoritesTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableVC.swift; sourceTree = "<group>"; };
 		B7AF4B241EA29664005417FC /* FileExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileExtensions.swift; sourceTree = "<group>"; };
+		B7AF4B261EA2F4AC005417FC /* ParkFinder-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ParkFinder-Bridging-Header.h"; sourceTree = "<group>"; };
+		B7AF4B291EA2F827005417FC /* ParkPanoramaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkPanoramaViewController.swift; sourceTree = "<group>"; };
 		E468969EB0D63E20F556E0B7 /* Pods_ParkFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -78,6 +81,7 @@
 		B75742D81E91F2B700D9F2AF /* ParkFinder */ = {
 			isa = PBXGroup;
 			children = (
+				B7AF4B261EA2F4AC005417FC /* ParkFinder-Bridging-Header.h */,
 				B75742D91E91F2B700D9F2AF /* AppDelegate.swift */,
 				B7AF4B231EA29616005417FC /* Extensions */,
 				B75742F71E935FF500D9F2AF /* Singletons */,
@@ -124,6 +128,7 @@
 				B75742F51E93586900D9F2AF /* ParksTableVC.swift */,
 				B75742FC1E9363EA00D9F2AF /* ParkDetailTableVC.swift */,
 				B7AABC641E9F42B900CDD49D /* FavoritesTableVC.swift */,
+				B7AF4B291EA2F827005417FC /* ParkPanoramaViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -283,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7AF4B2A1EA2F827005417FC /* ParkPanoramaViewController.swift in Sources */,
 				B75742DC1E91F2B700D9F2AF /* ViewController.swift in Sources */,
 				B75742DA1E91F2B700D9F2AF /* AppDelegate.swift in Sources */,
 				B75742F91E93600E00D9F2AF /* ParkData.swift in Sources */,
@@ -419,6 +425,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reccanti.ParkFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ParkFinder/ParkFinder-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -433,6 +440,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reccanti.ParkFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ParkFinder/ParkFinder-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
