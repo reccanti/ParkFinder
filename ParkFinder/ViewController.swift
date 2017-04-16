@@ -176,20 +176,15 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         let identifier = "pinIdentifier"
         let view: MKPinAnnotationView
-        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-            as? MKPinAnnotationView {
-            // reuse an existing view
-            dequeuedView.annotation = annotation
-            view = dequeuedView
-        } else {
-            // make a new view and a put a button in it
-            view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-            view.canShowCallout = true
-            view.calloutOffset = CGPoint(x: -5, y: 5)
-            if annotation.image != nil {
-                view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as UIView
-            }
+
+        // make a new view and a put a button in it
+        view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+        view.canShowCallout = true
+        view.calloutOffset = CGPoint(x: -5, y: 5)
+        if annotation.image != nil {
+            view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as UIView
         }
+        
         return view
     }
 
