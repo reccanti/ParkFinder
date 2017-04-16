@@ -12,7 +12,6 @@ class ParkPanoramaViewController: UIViewController {
 
     @IBOutlet weak var parkVRView: GVRPanoramaView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

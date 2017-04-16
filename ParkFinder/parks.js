@@ -19,7 +19,8 @@
                 "longitude":"-77.95944",
                 "name":"Letchworth State Park",
                 "description":"The \"Grand Canyon of the East,\" Letchworth is one of the most magnificent areas in the eastern U.S. Waterfalls, cliffs, and a deep gorge are just some of the parks stunning features.",
-                "url":"https://parks.ny.gov/parks/79/details.aspx"
+                "url":"https://parks.ny.gov/parks/79/details.aspx",
+                "image":"letchworth360.jpg"
               },
               {
                 "latitude":"40.612817900499998",
@@ -61,7 +62,8 @@
                 "longitude":"-73.949",
                 "name":"Walkway Over the Hudson State Historic Park",
                 "description":"The park provides access to the Hudson River's breathtaking landscape. The bridge deck stands 212 feet above the river's surface and is 6,678 feet (1.28 miles) long, making it the longest, elevated pedestrian bridge in the world.",
-                "url": "https://parks.ny.gov/parks/178/details.aspx"
+                "url": "https://parks.ny.gov/parks/178/details.aspx",
+                "image": "hudson360.jpg"
               },
               {
                 "latitude":"43.36139",
@@ -82,7 +84,8 @@
                 "longitude":"-77.69278",
                 "name":"Stony Brook State Park",
                 "description":"Hilly woodlands, a deep gorge with rugged cliffs, three waterfalls and fascinating rock formations comprise the park offering camping, hiking and swimming in a stream-fed pool.",
-                "url": "https://parks.ny.gov/parks/118/details.aspx"
+                "url": "https://parks.ny.gov/parks/118/details.aspx",
+                "image": "stonybrook360.jpg"
               },
               {
                 "latitude":"43.30028",

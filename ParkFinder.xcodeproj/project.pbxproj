@@ -22,6 +22,9 @@
 		B7AABC651E9F42B900CDD49D /* FavoritesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AABC641E9F42B900CDD49D /* FavoritesTableVC.swift */; };
 		B7AF4B251EA29664005417FC /* FileExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AF4B241EA29664005417FC /* FileExtensions.swift */; };
 		B7AF4B2A1EA2F827005417FC /* ParkPanoramaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AF4B291EA2F827005417FC /* ParkPanoramaViewController.swift */; };
+		B7BD08361EA3135000E22573 /* hudson360.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B7BD08351EA3135000E22573 /* hudson360.jpg */; };
+		B7BD08381EA3136700E22573 /* letchworth360.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B7BD08371EA3136700E22573 /* letchworth360.jpg */; };
+		B7BD083A1EA3137300E22573 /* stonybrook360.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B7BD08391EA3137300E22573 /* stonybrook360.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		B7AF4B241EA29664005417FC /* FileExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileExtensions.swift; sourceTree = "<group>"; };
 		B7AF4B261EA2F4AC005417FC /* ParkFinder-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ParkFinder-Bridging-Header.h"; sourceTree = "<group>"; };
 		B7AF4B291EA2F827005417FC /* ParkPanoramaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkPanoramaViewController.swift; sourceTree = "<group>"; };
+		B7BD08351EA3135000E22573 /* hudson360.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hudson360.jpg; sourceTree = "<group>"; };
+		B7BD08371EA3136700E22573 /* letchworth360.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = letchworth360.jpg; sourceTree = "<group>"; };
+		B7BD08391EA3137300E22573 /* stonybrook360.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stonybrook360.jpg; sourceTree = "<group>"; };
 		E468969EB0D63E20F556E0B7 /* Pods_ParkFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -108,6 +114,9 @@
 		B75742EE1E9201AA00D9F2AF /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				B7BD08371EA3136700E22573 /* letchworth360.jpg */,
+				B7BD08351EA3135000E22573 /* hudson360.jpg */,
+				B7BD08391EA3137300E22573 /* stonybrook360.jpg */,
 				B7036D2E1E9691C600D9A1A2 /* parks.js */,
 			);
 			name = Data;
@@ -226,10 +235,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7BD08361EA3135000E22573 /* hudson360.jpg in Resources */,
 				B7036D2F1E9691C600D9A1A2 /* parks.js in Resources */,
 				B75742E41E91F2B700D9F2AF /* LaunchScreen.storyboard in Resources */,
 				B75742E11E91F2B700D9F2AF /* Assets.xcassets in Resources */,
 				B75742DF1E91F2B700D9F2AF /* Main.storyboard in Resources */,
+				B7BD083A1EA3137300E22573 /* stonybrook360.jpg in Resources */,
+				B7BD08381EA3136700E22573 /* letchworth360.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
