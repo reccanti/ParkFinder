@@ -108,6 +108,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
             if description.isEmpty {
                 description = "No description found"
             }
+            var image:String = d["image"].stringValue
             
             // no optional binding necessary!
             let latitude = d["latitude"].floatValue
@@ -119,8 +120,9 @@ class ViewController: UIViewController, MKMapViewDelegate {
                 name: name,
                 latitude: latitude,
                 longitude: longitude,
-                url: url, description:
-                description)
+                url: url,
+                description:description,
+                image:image)
             
             parks.append(park)
         }

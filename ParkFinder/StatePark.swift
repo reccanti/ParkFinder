@@ -19,6 +19,7 @@ public class StatePark:NSObject, MKAnnotation, Comparable, NSCoding {
     private var parkDescription:String
     
     public var url: URL
+    public var image: String?
     
     enum ParkKey: String {
         case nameKey = "name"
@@ -26,6 +27,7 @@ public class StatePark:NSObject, MKAnnotation, Comparable, NSCoding {
         case longitudeKey = "longitude"
         case urlKey = "url"
         case descriptionKey = "description"
+        case imageKey = "image"
     }
     
     // MARK: - various initializers
@@ -34,12 +36,13 @@ public class StatePark:NSObject, MKAnnotation, Comparable, NSCoding {
      * Initializes the StatePark with its name,
      * location, and url
      */
-    init(name:String, latitude:Float, longitude:Float, url:String, description:String) {
+    init(name:String, latitude:Float, longitude:Float, url:String, description:String, image:String?) {
         self.name = name
         self.latitude = latitude
         self.longitude = longitude
         self.url = URL(string: url)!
         self.parkDescription = description
+        self.image = image
     }
     
     /**
@@ -52,6 +55,7 @@ public class StatePark:NSObject, MKAnnotation, Comparable, NSCoding {
         self.longitude = aDecoder.decodeFloat(forKey: ParkKey.longitudeKey.rawValue)
         self.url = aDecoder.decodeObject(forKey: ParkKey.urlKey.rawValue) as! URL
         self.parkDescription = aDecoder.decodeObject(forKey: ParkKey.descriptionKey.rawValue) as! String
+        self.image = aDecoder.decodeObject(forKey: ParkKey.imageKey.rawValue) as? String
     }
     
     // MARK: - NSObject properties
@@ -91,5 +95,8 @@ public class StatePark:NSObject, MKAnnotation, Comparable, NSCoding {
         aCoder.encode(latitude, forKey: ParkKey.latitudeKey.rawValue)
         aCoder.encode(longitude, forKey: ParkKey.longitudeKey.rawValue)
         aCoder.encode(parkDescription, forKey: ParkKey.descriptionKey.rawValue)
+        if image != nil {
+            aCoder.encode(image, forKey: ParkKey.imageKey.rawValue)
+        }
     }
 }

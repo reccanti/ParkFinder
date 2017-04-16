@@ -14,13 +14,13 @@ class ParkPanoramaViewController: UIViewController {
     var park: StatePark!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
         title = "Cardboard View"
         parkVRView.enableCardboardButton = true
-        parkVRView.load(UIImage(named: "andes.jpg"), of: GVRPanoramaImageType.stereoOverUnder)
+        parkVRView.load(UIImage(named: park.image!), of: GVRPanoramaImageType.mono)
     }
 
     override func didReceiveMemoryWarning() {
