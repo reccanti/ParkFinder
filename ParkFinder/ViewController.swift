@@ -126,7 +126,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
                 longitude: longitude,
                 url: url,
                 description:description,
-                image:image)
+                image:image
+            )
             
             parks.append(park)
         }
@@ -185,7 +186,9 @@ class ViewController: UIViewController, MKMapViewDelegate {
             view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             view.canShowCallout = true
             view.calloutOffset = CGPoint(x: -5, y: 5)
-            view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as UIView
+            if annotation.image != nil {
+                view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as UIView
+            }
         }
         return view
     }
