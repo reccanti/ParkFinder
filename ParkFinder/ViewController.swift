@@ -108,7 +108,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
             if description.isEmpty {
                 description = "No description found"
             }
-            var image:String = d["image"].stringValue
+            let imageString:String = d["image"].stringValue
+            var image:String? = nil
+            if !imageString.isEmpty {
+                image = imageString
+            }
             
             // no optional binding necessary!
             let latitude = d["latitude"].floatValue
@@ -195,8 +199,9 @@ class ViewController: UIViewController, MKMapViewDelegate {
             print("This annotation isn't a StatePark")
             return
         }
-//        openURL(forStatePark: annotation)
-        performSegue(withIdentifier: "toPanorama", sender:nil)
+        if annotation.image != nil {
+            performSegue(withIdentifier: "toPanorama", sender:nil)
+        }
     }
     
     // MARK: - Notifications -
@@ -211,12 +216,28 @@ class ViewController: UIViewController, MKMapViewDelegate {
     }
     
     // MARK: - Navigation
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "toPanorama" {
+            print("testing panorama")
+            guard let annotation = mapView.selectedAnnotations[0] as? StatePark else {
+                return false
+            }
+            if annotation.image != nil {
+                print("image not nil")
+                return true
+            } else {
+                return false
+            }
+        }
+        return true
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toPanorama" {
-            if let annotation = mapView.selectedAnnotations[0] as? StatePark {
-                let panoramaView = segue.destination as! ParkPanoramaViewController
-                panoramaView.park = annotation
+            guard let annotation = mapView.selectedAnnotations[0] as? StatePark else {
+                return
             }
+            let panoramaView = segue.destination as! ParkPanoramaViewController
+            panoramaView.park = annotation
         }
     }
 }

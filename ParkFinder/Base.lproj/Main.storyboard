@@ -212,7 +212,9 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D80-T6-Y95" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="fhv-v7-meC"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yPx-kE-7C1">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yPx-kE-7C1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -231,7 +233,9 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AhQ-Nq-EdL" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Parks" image="location" id="1v6-h6-qiU"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="y4T-59-D80">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="y4T-59-D80">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -250,7 +254,9 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z0y-FE-UOB" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="satellite" id="ZuM-wu-cKe"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="wc0-MF-fe7">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wc0-MF-fe7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
