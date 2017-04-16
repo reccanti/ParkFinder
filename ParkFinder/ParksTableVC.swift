@@ -109,7 +109,7 @@ class ParksTableVC: UITableViewController {
                 return
             }
             let detailVC = segue.destination as! ParkDetailTableVC
-            detailVC.park = ParkData.sharedData.parks[selectedRow]
+            detailVC.park = ParkData.sharedData.sortedParks[selectedRow]
         }
     }
 
