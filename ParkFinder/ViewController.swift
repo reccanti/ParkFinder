@@ -33,6 +33,24 @@ class ViewController: UIViewController, MKMapViewDelegate {
     }
     
     /**
+     * Hide the Navigation bar on the map before
+     * the view appears
+     */
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        super.viewWillAppear(animated)
+    }
+    
+    /**
+     * Display the Navigation bar before the view
+     * disappears
+     */
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        super.viewWillDisappear(animated)
+    }
+    
+    /**
      * Deinitialize the ViewController
      */
     deinit {
@@ -175,7 +193,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
             print("This annotation isn't a StatePark")
             return
         }
-        openURL(forStatePark: annotation)
+//        openURL(forStatePark: annotation)
+        performSegue(withIdentifier: "toPanorama", sender:nil)
     }
     
     // MARK: - Notifications -
@@ -186,6 +205,16 @@ class ViewController: UIViewController, MKMapViewDelegate {
         // select the park annotation that was passed over
         if let park = notification.userInfo!["park"] as? MKAnnotation {
             mapView.selectAnnotation(park, animated: true)
+        }
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toPanorama" {
+            if let annotation = mapView.selectedAnnotations[0] as? StatePark {
+                let panoramaView = segue.destination as! ParkPanoramaViewController
+                panoramaView.park = annotation
+            }
         }
     }
 }

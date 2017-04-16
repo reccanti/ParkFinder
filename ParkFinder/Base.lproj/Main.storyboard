@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ikr-ue-29F">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ial-zZ-aPX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -35,7 +35,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UbJ-Cl-nnW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2615.1999999999998" y="886.50674662668678"/>
+            <point key="canvasLocation" x="2306" y="1158"/>
         </scene>
         <!--Park Panorama View Controller-->
         <scene sceneID="DEQ-5t-ycc">
@@ -57,13 +57,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Kwh-Jp-DbU">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="0Mo-ok-g7q"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="parkVRView" destination="K4A-C1-sTu" id="C7f-Pv-F4d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yFR-mP-dmy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1140" y="-667.01649175412297"/>
+            <point key="canvasLocation" x="2223.1999999999998" y="124.58770614692655"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="X8m-GS-Gdq">
@@ -75,7 +78,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="7Ox-cc-5DA"/>
+                        <segue destination="z0y-FE-UOB" kind="relationship" relationship="viewControllers" id="7Ox-cc-5DA"/>
                         <segue destination="AhQ-Nq-EdL" kind="relationship" relationship="viewControllers" id="ajG-iD-O4B"/>
                         <segue destination="D80-T6-Y95" kind="relationship" relationship="viewControllers" id="wg9-4S-tLM"/>
                         <segue destination="Lne-KV-01S" kind="relationship" relationship="viewControllers" id="Br8-5B-Uq4"/>
@@ -98,7 +101,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uf7-qs-nBg" id="CZR-Bd-lv4">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -127,10 +130,10 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="plainCell" id="qKs-we-XZT">
-                                <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qKs-we-XZT" id="5TZ-9B-AIR">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -158,7 +161,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Ad-hr-7fU" id="Mk3-9r-OSR">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -174,7 +177,7 @@
             </objects>
             <point key="canvasLocation" x="1284" y="1158.1709145427287"/>
         </scene>
-        <!--Map-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ParkFinder" customModuleProvider="target" sceneMemberID="viewController">
@@ -193,14 +196,15 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="satellite" id="ZuM-wu-cKe"/>
+                    <navigationItem key="navigationItem" id="m7b-T2-PFq"/>
                     <connections>
                         <outlet property="mapView" destination="3Il-rH-aKE" id="97z-zW-qtL"/>
+                        <segue destination="Ikr-ue-29F" kind="show" identifier="toPanorama" id="Gtc-Re-mhd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="738" y="125"/>
+            <point key="canvasLocation" x="1284" y="124.58770614692655"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MkK-3s-0ja">
@@ -208,7 +212,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D80-T6-Y95" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="fhv-v7-meC"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yPx-kE-7C1">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yPx-kE-7C1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -227,7 +231,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AhQ-Nq-EdL" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Parks" image="location" id="1v6-h6-qiU"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="y4T-59-D80">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="y4T-59-D80">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -239,6 +243,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bso-th-lSI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1607.2" y="1157.2713643178411"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="VWU-f5-Mo1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z0y-FE-UOB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" image="satellite" id="ZuM-wu-cKe"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="wc0-MF-fe7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jLa-mK-NJH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hPA-8z-4Ko" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="344.80000000000001" y="124.58770614692655"/>
         </scene>
     </scenes>
     <resources>

@@ -11,11 +11,14 @@ import UIKit
 class ParkPanoramaViewController: UIViewController {
 
     @IBOutlet weak var parkVRView: GVRPanoramaView!
+    var park: StatePark!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        title = "Cardboard View"
         parkVRView.enableCardboardButton = true
         parkVRView.load(UIImage(named: "andes.jpg"), of: GVRPanoramaImageType.stereoOverUnder)
     }
