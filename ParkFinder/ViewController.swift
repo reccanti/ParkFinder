@@ -187,7 +187,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
             view.canShowCallout = true
             view.calloutOffset = CGPoint(x: -5, y: 5)
             if annotation.image != nil {
-                print(annotation.image)
                 view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as UIView
             }
         }
@@ -211,7 +210,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
     // MARK: - Notifications -
     func showMap(notification: NSNotification) {
         // change to map tab - this works as long as the map is on the first tab
-        print(tabBarController)
         tabBarController?.selectedIndex = 0
         
         // select the park annotation that was passed over
