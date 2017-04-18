@@ -14,7 +14,7 @@ class ParkDetailTableVC: UITableViewController {
     var park:StatePark?
     let myNumSections = 5
     enum MySection: Int {
-        case title = 0, description, favorite, viewOnMap, share
+        case title = 0, description, favorite, viewOnMap, web, share
     }
     
     override func viewDidLoad() {
@@ -76,6 +76,13 @@ class ParkDetailTableVC: UITableViewController {
             cell.textLabel?.numberOfLines = 1
             cell.textLabel?.textAlignment = .center
             
+        case MySection.web.rawValue:
+            cell.textLabel?.text = "Open In Safari"
+            cell.textLabel?.textColor = view.tintColor // "hyperlink blue" by default
+            cell.textLabel?.font = UIFont.systemFont(ofSize: 18.0)
+            cell.textLabel?.numberOfLines = 1
+            cell.textLabel?.textAlignment = .center
+            
         case MySection.share.rawValue:
             cell.textLabel?.text = "Share"
             cell.textLabel?.textColor = view.tintColor // "hyperlink blue" by default
@@ -121,6 +128,17 @@ class ParkDetailTableVC: UITableViewController {
             let data = ["park":park]
             nc.post(name: showParkNotification, object: self, userInfo: data)
         }
+        
+        // open the park's URL in Safari
+        if indexPath.section == MySection.web.rawValue {
+            if park != nil {
+                UIApplication.shared.open(
+                    park!.url,
+                    options: [:]
+                )
+            }
+        }
+        
         // share park details on social media
         if indexPath.section == MySection.share.rawValue {
             
