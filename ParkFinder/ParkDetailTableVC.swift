@@ -89,7 +89,7 @@ class ParkDetailTableVC: UITableViewController {
             cell.textLabel?.font = UIFont.systemFont(ofSize: 18.0)
             cell.textLabel?.numberOfLines = 1
             cell.textLabel?.textAlignment = .center
-            
+
         default:
             cell.textLabel?.text = "TBD"
         }
@@ -124,9 +124,11 @@ class ParkDetailTableVC: UITableViewController {
         
         // display the park on the map view
         if indexPath.section == MySection.viewOnMap.rawValue {
-            let nc = NotificationCenter.default
-            let data = ["park":park]
-            nc.post(name: showParkNotification, object: self, userInfo: data)
+            if park != nil {
+                let nc = NotificationCenter.default
+                let data = ["park":park!]
+                nc.post(name: showParkNotification, object: self, userInfo: data)
+            }
         }
         
         // open the park's URL in Safari
